@@ -32,31 +32,38 @@
 
           <!-- News Section -->
           <div class="box-section news-section">
-            <details>
-              <summary>
-                آخر الأخبار
-              </summary>
+            <div class="item-header cursor-pointer" onclick="toggleNewsContent(this)">
+              <h3>آخر الأخبار</h3>
+            </div>
+            <div class="item-content hidden">
               <p>تم إطلاق المنصة الجديدة لتسجيل المستخدمين بتاريخ 30 مايو.</p>
-            </details>
+            </div>
           </div>
+
 
           <!-- Downloads Section -->
           <div class="box-section downloads-section">
+            <div class="item-header cursor-pointer" onclick="toggleNewsContent(this)">
             <h3>
               ملفات قابلة للتنزيل
             </h3>
+            </div>
+            <div class="item-content hidden">
             <ul id="downloadList">
               <li><a href="downloads/file1.pdf" download>دليل الاستخدام</a></li>
               <li><a href="downloads/file2.pdf" download>نموذج تسجيل</a></li>
             </ul>
+            </div>
           </div>
 
           <!-- Events Section -->
           <div class="box-section events-section">
+            <div class="item-header cursor-pointer" onclick="toggleNewsContent(this)">
             <h3>
               المناسبات القادمة
             </h3>
-            <ul>
+            </div>
+            <ul class="item-content hidden">
               <li>الاجتماع السنوي - 15 مايو 2025</li>
               <li>ورشة العمل التقنية - 10 يونيو 2025</li>
             </ul>
@@ -64,10 +71,14 @@
 
           <!-- Updates Section -->
           <div class="box-section updates-section">
+            <div class="item-header cursor-pointer" onclick="toggleNewsContent(this)">
             <h3>
               آخر مستجدات الشركة
             </h3>
-            <p>افتتاح مكتب جديد في محافظة ظفار لدعم الأنشطة الرقمية.</p>
+            </div>
+            <ul class="item-content hidden">
+              <il>افتتاح مكتب جديد في محافظة ظفار لدعم الأنشطة الرقمية.</il>
+            </ul>
           </div>
         </div>
       </main>

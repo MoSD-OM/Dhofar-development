@@ -24,3 +24,7 @@ window.onload = function () {
       list.innerHTML = '<li>عذراً، تعذر تحميل الملفات حالياً</li>';
     });
 }
+function toggleNewsContent(headerElement) {
+  const content = headerElement.nextElementSibling;
+  content.classList.toggle('hidden');
+}
