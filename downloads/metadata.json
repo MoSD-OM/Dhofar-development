@@ -1,4 +1,7 @@
 {
-  "file1.pdf": "دليل الاستخدام",
-  "file2.pdf": "الجدول الزمني"
+  "MoSD_Guideline-2022": {
+    "display": "MoSD Guideline - 2022",
+    "url": "https://drive.google.com/file/d/1AbCDEFGHIJKLMNOPQR/view?usp=sharing",
+    "external": true
+  }
 }

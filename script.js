@@ -8,13 +8,24 @@ window.onload = function () {
       const list = document.getElementById('downloadList');
       list.innerHTML = ''; // Clear previous content
 
-      Object.entries(metadata).forEach(([filename, display]) => {
-        if (filename && display) {
+      Object.entries(metadata).forEach(([key, value]) => {
+        if (value && value.display && value.url !== undefined) {
           const li = document.createElement('li');
-          li.innerHTML = `<a href="downloads/${filename}" download>${display}</a>`;
+          const href = value.external ? value.url : `downloads/${value.url}`;
+          const anchor = document.createElement('a');
+          anchor.href = href;
+          anchor.textContent = value.display;
+
+          if (value.external) {
+            anchor.target = '_blank'; // Open external links in new tab
+          } else {
+            anchor.setAttribute('download', '');
+          }
+
+          li.appendChild(anchor);
           list.appendChild(li);
         } else {
-          console.warn('Missing filename or display value:', filename, display);
+          console.warn('Invalid entry in metadata:', key, value);
         }
       });
     })
@@ -24,6 +35,7 @@ window.onload = function () {
       list.innerHTML = '<li>عذراً، تعذر تحميل الملفات حالياً</li>';
     });
 }
+
 function toggleNewsContent(headerElement) {
   const content = headerElement.nextElementSibling;
   content.classList.toggle('hidden');

@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
 
 :root {
-  --primary-color: #089637;
-  --secondary-color: #ffd800;
+  --primary-color: #ffd800;
+  /*for future use*/
+  --secondary-color: #089637;
   --glass-background: rgba(255, 255, 255, 0.08);
 }
 
@@ -55,7 +56,7 @@ body, html {
   padding: 20px;
   border-radius: 12px;
   background: var(--glass-background);
-  border-right: 3px solid var(--secondary-color);
+  border-right: 3px solid var(--primary-color);
   transition: all 0.3s ease;
 }
 
@@ -100,7 +101,7 @@ a {
 }
 
 a:hover {
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 h3 {
